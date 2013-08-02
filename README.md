@@ -99,3 +99,31 @@ API
 
     ungetwch(unicode_char)
         Unicode variant of ungetch(), accepting a str value.
+
+See also
+--------
+
+ * stdlib termios, tty, msvcrt, and curses modules.
+ * http://code.activestate.com/recipes/134892-getch-like-unbuffered/: An
+   ActiveState recipe for getch on Unix, which I'll have to check to see
+   if it does anything I should be doing but am not.
+ * https://pypi.python.org/pypi/getch: An even more minimalist version of 
+   the same idea, providing only getch and getche... but it seems to use a C
+   extension module to call MSVCRT or termios functions directly, instead of
+   using the existing stdlib wrappers.
+ * https://pypi.python.org/pypi/pager: A more complex library that has some
+   overlap with consoleio. Also see http://bugs.python.org/issue8408, a 
+   rejected bug report to add pager to the stdlib.
+ * https://pypi.python.org/pypi/term: An POSIX-only module that extends tty
+   (primarily adding context managers, but also an interesting getyx
+   function, and code to open /dev/tty).
+ * https://pypi.python.org/pypi/termprop: A POSIX-only module that extends
+   termios.
+ * Various libraries to do cross-platform colored console output (colorconsole,
+   termstyle, Colors, colorama, etc.). It's worth verifying that they can be
+   used together with consoleio.
+ * Various libraries to do more extreme output formatting, including anything
+   from cursor addressing to dithering graphics to text (libcaca, fabulous, 
+   Console, Python-Conio, etc.), many platform-specific.
+ * Various curses extensions/replacements like blessings, and wrappers
+   for wincurses.
