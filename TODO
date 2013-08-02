@@ -1,0 +1,5 @@
+ * Test on Windows.
+ * Test on more POSIX platforms.
+ * Better error handling.
+ * Finish and PyPI-ify setup.py.
+ * Maybe better state management (currently state is a module global...).
