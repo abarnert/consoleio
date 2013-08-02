@@ -4,3 +4,4 @@
  * Finish and PyPI-ify setup.py.
  * Maybe better state management (currently state is a module global...).
  * Test on Python 2.x, figure out the earliest version that's easy to support.
+ * Is there a way to incorporate cbreak mode into the model?
